@@ -1,1 +1,2 @@
-# graduation_picture
+# frontend-default
+gulp + babel 최적화

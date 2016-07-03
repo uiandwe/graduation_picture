@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.row{
+    clear: both;
+}
+/* header */
+
+.header{
+
+
+}
+
+.content{
+	width: 700px;
+}
+
+.overflow-x{
+	width:420px; 
+	height:170px; 
+	border:1px solid red; 
+	white-space:nowrap; 
+	overflow-x:scroll; 
+}
