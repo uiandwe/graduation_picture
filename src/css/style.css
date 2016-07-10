@@ -1,7 +1,9 @@
 *{
     box-sizing: border-box;
 }
-
+body{
+	background-color: #1d1d1d;
+}
 .left{
     float: left;
 }
@@ -15,19 +17,56 @@
 }
 /* header */
 
-.header{
-
+header{
+	height:50px;
+	padding-top: 10px;
+	background-color: #222;
+	border-bottom: 1px solid #000;
+	text-align: center;
 
 }
 
 .content{
-	width: 700px;
+	padding:10px;
+	width: 100%;
+	background-color: #1d1d1d;
+	
+}
+ 
+h1, .content h2, .content .album h3{
+	text-transform: capitalize;
+	color: rgba(255, 255, 255, 0.6);
 }
 
-.overflow-x{
-	width:420px; 
-	height:170px; 
-	border:1px solid red; 
-	white-space:nowrap; 
-	overflow-x:scroll; 
+.content h2{
+	margin-bottom: 10px;
+}
+/* album */
+.album{
+	display: inline-block;
+	float: left;
+	margin-right: 20px;
+	border: 1px solid #666;
+	position: relative;
+}
+
+.album:hover{
+	border: 1px solid #3498db;
+}
+.album .overlay{
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+}
+
+.album .overlay .title{
+	padding-left: 10px;
+	margin-bottom: 10px;
+}
+
+.album .overlay a{
+	padding-left: 10px;
+	margin-bottom: 10px;
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 10px;
 }
