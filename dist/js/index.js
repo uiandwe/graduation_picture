@@ -18,11 +18,11 @@ window.onload = function () {
 				}
 			});
 		}
-		$("img.active").mouseover(function () {
+		$(document).mouseover($("img.active"), function () {
 			img_carousel();
 		});
 
-		$("img.active").hover(function () {
+		$(document).hover($("img.active"), function () {
 			img_carousel();
 		});
 
