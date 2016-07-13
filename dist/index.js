@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
- 
-const rootElement = document.getElementById('root');
-ReactDOM.render(<App />, rootElement);
+import Carousel from './components/Carousel';
+
+if (document.getElementById('Carousel')){
+	const CarouselElement = document.getElementById('Carousel');
+	ReactDOM.render(<Carousel />, CarouselElement);
+}

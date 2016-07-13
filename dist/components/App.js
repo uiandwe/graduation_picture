@@ -9,31 +9,35 @@ const App = React.createClass({
     },
 
     componentDidMount: function() {
-        $.get('http://127.0.0.1:8000/files/').done(function(data) {
+        console.log("!")
+        $.get('http://127.0.0.1:8000/files/?type=shin').done(function(data) {
           this.setState({data: data});
         }.bind(this));
       },
   
     render(){
+        console.log(this.state.data.data) 
         if (this.state.data) {
             var rows = [];
 
+
             for (var i=0; i < this.state.data.data.length; i++) {
-                if( i == 0){
-                    var active = 'active';
-                    rows.push(<img src={this.state.data.data[i].path} className="active" />);
-                }
-                else{
-                    rows.push(<img src={this.state.data.data[i].path}/>);    
-                }
+                rows.push(
+                <a >
+                    <div className="album" >
+                        <img src={this.state.data.data[i].path} className="img"/>
+                        <div className="overlay">
+                            <h3 className="title">starred</h3>
+                            <a>0 photos</a>
+                        </div>
+                    </div>  
+                </a>);
                 
             }
           return <div>
                     {rows}
                  </div>;
         }
-        
-        return <div></div>
         
     }
 });
